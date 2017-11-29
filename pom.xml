@@ -63,6 +63,26 @@
 				</configuration>
 			</plugin>
 			<!-- end::xsd[] -->
+			<!-- tag::xsd[] -->
+			<!--<plugin>-->
+				<!--<groupId>org.codehaus.mojo</groupId>-->
+				<!--<artifactId>jaxb2-maven-plugin</artifactId>-->
+				<!--<version>1.6</version>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>xjc</id>-->
+						<!--<goals>-->
+							<!--<goal>xjc</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+				<!--<configuration>-->
+					<!--<schemaDirectory>${project.basedir}/src/main/resources/PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs</schemaDirectory>-->
+					<!--<outputDirectory>${project.basedir}/src/main/java</outputDirectory>-->
+					<!--<clearOutputDir>false</clearOutputDir>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!-- end::xsd[] -->
 
 			<!-- maven-jaxb2-plugin -->
 			<plugin>
@@ -77,10 +97,11 @@
 					</execution>
 				</executions>
 				<configuration>
-					<schemaDirectory>${project.basedir}/src/main/resources/PFS/F5/com_kingfisher_oagis/9_5_1/Services/WebServices/WSDL</schemaDirectory>
+					<generateDirectory>${project.basedir}/src/main/java/generated</generateDirectory>
+					<schemaDirectory>${project.basedir}/src/main/resources/PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs</schemaDirectory>
 					<!--<schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>-->
 					<schemaIncludes>
-						<include>*.wsdl</include>
+						<include>ProcessFulfilmentSource.xsd</include>
 					</schemaIncludes>
 
 					<bindingDirectory>src/main/resources</bindingDirectory>

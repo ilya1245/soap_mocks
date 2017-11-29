@@ -28,4 +28,15 @@ public class PfsEndpoint {
 
 		return response;
 	}
+
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
+	@ResponsePayload
+	public GetCountryResponse getCountry(@RequestPayload com.kingfisher.oagis._9.ProcessFulfilmentSourceType request) {
+		GetCountryResponse response = new GetCountryResponse();
+		response.setCountry(countryRepository.findCountry(request.getName()));
+
+		return response;
+	}
+
+
 }
