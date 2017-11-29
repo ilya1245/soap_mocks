@@ -1,0 +1,63 @@
+<jaxb:bindings
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+
+  targetNamespace="http://w.com/location.contactlm"
+  jaxb:version="2.1">
+
+     <jaxb:bindings schemaLocation="PFS/F5/com_kingfisher_platform/1_2_1/Common/OAGi/Components/Components.xsd">
+        <jaxb:bindings node=".//xsd:complexType[@name='LocationType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='type']">
+                <jaxb:property name="NormalizedStringType"/>
+            </jaxb:bindings>
+            <jaxb:class name="LocationType"/>
+        </jaxb:bindings>
+     </jaxb:bindings>
+
+     <jaxb:bindings schemaLocation="PFS/F5/com_kingfisher_platform/1_2_1/Common/OAGi/Components/LogisticsComponents.xsd">
+        <jaxb:bindings node=".//xsd:complexType[@name='RouteStopType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='type']">
+                <jaxb:property name="NormalizedStringType"/>
+            </jaxb:bindings>
+            <jaxb:class name="RouteStopType"/>
+        </jaxb:bindings>
+
+        <jaxb:bindings node=".//xsd:complexType[@name='ContainerBaseType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='type']">
+                <jaxb:property name="NormalizedStringType"/>
+            </jaxb:bindings>
+            <jaxb:class name="ContainerBaseType"/>
+        </jaxb:bindings>
+
+        <jaxb:bindings node=".//xsd:complexType[@name='ShipUnitBaseType']">
+            <jaxb:bindings node=".//xsd:attribute[@name='type']">
+                <jaxb:property name="NormalizedStringType"/>
+            </jaxb:bindings>
+            <jaxb:class name="ShipUnitBaseType"/>
+        </jaxb:bindings>
+
+     </jaxb:bindings>
+
+      <jaxb:bindings schemaLocation="PFS/F5/com_kingfisher_platform/1_2_1/Common/OAGi/Components/OrderManagementComponents.xsd">
+         <jaxb:bindings node=".//xsd:complexType[@name='QualificationTermType']">
+             <jaxb:bindings node=".//xsd:attribute[@name='type']">
+                 <jaxb:property name="NormalizedStringType"/>
+             </jaxb:bindings>
+             <jaxb:class name="QualificationTermType"/>
+         </jaxb:bindings>
+      </jaxb:bindings>
+
+      <jaxb:bindings schemaLocation="PFS/F5/org_openapplications_platform/1_2_1/Common/OAGi/Components/Components.xsd">
+
+             <jaxb:bindings multiple="true" node=".//xsd:attribute[@name='type']">
+             <!--jaxb:bindings multiple="true" node=".//xsd:attribute[@type='NormalizedStringType']"-->
+                 <jaxb:property name="NormalizedStringType"/>
+             </jaxb:bindings>
+
+
+
+      </jaxb:bindings>
+
+</jaxb:bindings>

@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:kf="http://spring.io/kingfisher/mock">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <kf:getCountryRequest>
+         <kf:name>Spain</kf:name>
+      </kf:getCountryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
