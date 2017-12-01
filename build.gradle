@@ -29,7 +29,7 @@ task genJaxb {
 
     //ext.schema = "src/main/resources/PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs/ProcessFulfilmentSource.xsd"
 
-    ext.schema = "src/main/resources/countries.xsd"
+    ext.schema = "src/main/resources/countries/countries.xsd"
 
     outputs.dir classesDir
 

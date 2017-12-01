@@ -57,32 +57,43 @@
 					</execution>
 				</executions>
 				<configuration>
-					<schemaDirectory>${project.basedir}/src/main/resources/countries</schemaDirectory>
+					<schemaDirectory>${project.basedir}/src/main/resources/countries/</schemaDirectory>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>
 			</plugin>
 			<!-- end::xsd[] -->
-			<!-- tag::xsd[] -->
-			<!--<plugin>-->
-				<!--<groupId>org.codehaus.mojo</groupId>-->
-				<!--<artifactId>jaxb2-maven-plugin</artifactId>-->
-				<!--<version>1.6</version>-->
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<id>xjc</id>-->
-						<!--<goals>-->
-							<!--<goal>xjc</goal>-->
-						<!--</goals>-->
-					<!--</execution>-->
-				<!--</executions>-->
-				<!--<configuration>-->
-					<!--<schemaDirectory>${project.basedir}/src/main/resources/PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs</schemaDirectory>-->
-					<!--<outputDirectory>${project.basedir}/src/main/java</outputDirectory>-->
-					<!--<clearOutputDir>false</clearOutputDir>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
-			<!-- end::xsd[] -->
+
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>${maven-jaxb2-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
+					<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>
+					<schemaIncludes>
+						<include>ProcessFulfilmentSource.xsd</include>
+						<include>ProcessCarrierBooking.xsd</include>
+						<include>AcknowledgeFulfilmentSource.xsd</include>
+
+						<include>GetCarrierBooking.xsd</include>
+						<include>ShowCarrierBooking.xsd</include>
+					</schemaIncludes>
+
+					<bindingDirectory>src/main/resources</bindingDirectory>
+					<bindingIncludes>
+						<include>**/*.xjb</include>
+					</bindingIncludes>
+
+				</configuration>
+			</plugin>
 
 			<!-- maven-jaxb2-plugin -->
 			<plugin>
@@ -97,11 +108,16 @@
 					</execution>
 				</executions>
 				<configuration>
-					<generateDirectory>${project.basedir}/src/main/java/generated</generateDirectory>
+					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
 					<schemaDirectory>${project.basedir}/src/main/resources/PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs</schemaDirectory>
 					<!--<schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>-->
 					<schemaIncludes>
 						<include>ProcessFulfilmentSource.xsd</include>
+						<include>ProcessCarrierBooking.xsd</include>
+						<include>AcknowledgeFulfilmentSource.xsd</include>
+
+						<include>GetCarrierBooking.xsd</include>
+						<include>ShowCarrierBooking.xsd</include>
 					</schemaIncludes>
 
 					<bindingDirectory>src/main/resources</bindingDirectory>

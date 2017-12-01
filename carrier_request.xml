@@ -1,0 +1,140 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///G:/AltovaXML_projects/PFS/F5/com_kingfisher_oagis/9_5_1/Services/WebServices/WSDL/pfs.xsd">
+	<soapenv:Header/>
+	<soapenv:Body>
+<GetCarrierBooking releaseID="1.0" languageCode="en" xmlns="http://www.kingfisher.com/oagis/9" xmlns:ns="http://www.openapplications.org/oagis/9">
+  <ns:ApplicationArea>
+    <ns:Sender>
+      <ns:LogicalID>ATG</ns:LogicalID>
+      <ns:ComponentID>127.0.0.1</ns:ComponentID>
+    </ns:Sender>
+    <ns:CreationDateTime>2017-11-30T12:09:28.590+02:00</ns:CreationDateTime>
+    <ns:BODID>80784886568590</ns:BODID>
+  </ns:ApplicationArea>
+  <DataArea>
+    <ns:Get>
+      <ns:Expression expressionLanguage="Xpath">GetCarrierBooking/DataArea/CarrierBooking</ns:Expression>
+    </ns:Get>
+    <CarrierBooking>
+      <CarrierBookingHeader>
+        <SalesOrderReference>
+          <ns:DocumentID>
+            <ns:ID>o3366002</ns:ID>
+          </ns:DocumentID>
+        </SalesOrderReference>
+        <CustomerParty>
+          <ns:ID schemeID="2" schemeName="SAP">0060006355</ns:ID>
+          <ns:GroupType name="Retail">3</ns:GroupType>
+        </CustomerParty>
+        <BrandChannel>
+          <Brand>
+            <ns:Code>BQ</ns:Code>
+          </Brand>
+          <Channel>
+            <ns:Code>WEB</ns:Code>
+          </Channel>
+        </BrandChannel>
+        <ShipToParty>
+          <ns:Title>Mr</ns:Title>
+          <ns:GivenName>Missm09#&amp;.'-1234567890123456789012345678</ns:GivenName>
+          <ns:FamilyName>Missm09#&amp;.'-1234567890123456789012345678</ns:FamilyName>
+          <Contact>
+            <Location>
+              <ns:Address type="CUSTOMER">
+                <ns:BuildingNumber>1234567890</ns:BuildingNumber>
+                <ns:BuildingName>Missm09#&amp;.'-1234567890123456789012345678</ns:BuildingName>
+                <ns:StreetName>Missm09#&amp;.'-1234567890123456789012345678</ns:StreetName>
+                <ns:CitySubDivisionName>Missm09#&amp;.'-1234567890123456789012345678</ns:CitySubDivisionName>
+                <ns:CityName>Missm09#&amp;.'-1234567890123456789012345678</ns:CityName>
+                <ns:CountrySubDivisionCode>Missm09#&amp;.'-1234567890123456789012345678</ns:CountrySubDivisionCode>
+                <ns:CountryCode>GB</ns:CountryCode>
+                <ns:PostalCode>M80 2NW</ns:PostalCode>
+              </ns:Address>
+            </Location>
+          </Contact>
+        </ShipToParty>
+        <ns:Type listName="DEFAULT">L_Standard</ns:Type>
+        <CalendarDateOnlyRequiredIndicator>true</CalendarDateOnlyRequiredIndicator>
+        <InstallationManagedOrderIndicator>false</InstallationManagedOrderIndicator>
+      </CarrierBookingHeader>
+      <CarrierBookingLine>
+        <SalesOrderReference>
+          <ns:LineNumber>1</ns:LineNumber>
+        </SalesOrderReference>
+        <ProductItem>
+          <ns:ItemID>
+            <ns:ID>100493025</ns:ID>
+          </ns:ItemID>
+          <ns:UPCID>5052931394203</ns:UPCID>
+          <ns:Dimensions>
+            <ns:WidthMeasure unitCode="CMT">43.0</ns:WidthMeasure>
+            <ns:LengthMeasure unitCode="CMT">42.0</ns:LengthMeasure>
+            <ns:HeightMeasure unitCode="CMT">78.0</ns:HeightMeasure>
+            <ns:Measure type="WEIGHT" unitCode="KGM">39.0</ns:Measure>
+          </ns:Dimensions>
+          <ProductIndicator>
+            <Indicator>false</Indicator>
+            <ns:Type name="COSHH">false</ns:Type>
+          </ProductIndicator>
+          <ItemSupplier>
+            <ns:SupplierItemID>
+              <ns:ID>MOK100493025</ns:ID>
+            </ns:SupplierItemID>
+            <SupplierParty>
+              <ns:PartyIDs>
+                <ns:ID>3600049</ns:ID>
+              </ns:PartyIDs>
+            </SupplierParty>
+          </ItemSupplier>
+          <ns:TransportationMethodCode>ZF03</ns:TransportationMethodCode>
+        </ProductItem>
+        <ns:Quantity>1</ns:Quantity>
+        <ns:RequiredDeliveryDateTime>2017-11-30T12:09:26.794+02:00</ns:RequiredDeliveryDateTime>
+        <RequiredQuantityAvailableDateTime>2017-11-30T12:09:26.923+02:00</RequiredQuantityAvailableDateTime>
+        <ns:UnitPrice>
+          <ns:Amount currencyID="GBP">167.0</ns:Amount>
+          <ns:PerQuantity>1</ns:PerQuantity>
+        </ns:UnitPrice>
+        <ShippingMethod>
+          <ns:CategoryCodes>
+            <ns:Code listName="DEFAULT">ZVH</ns:Code>
+          </ns:CategoryCodes>
+        </ShippingMethod>
+        <DeliveryPriorityCode>NORMAL</DeliveryPriorityCode>
+        <DeliveryType>DELIVERY</DeliveryType>
+        <DeliveryGroupCode>DSV -7</DeliveryGroupCode>
+        <FulfilmentSiteID>0683</FulfilmentSiteID>
+        <NewLineIndicator>false</NewLineIndicator>
+        <DeliveryGroupingRequiredIndicator>false</DeliveryGroupingRequiredIndicator>
+        <FulfilmentSourceType>DSV - Delivery to Home</FulfilmentSourceType>
+      </CarrierBookingLine>
+      <CarrierBookingGroup>
+        <DeliveryGroupCode>DSV -7</DeliveryGroupCode>
+        <DeliveryPriorityCode>NORMAL</DeliveryPriorityCode>
+        <ns:Status>
+          <ns:Code>OPEN</ns:Code>
+        </ns:Status>
+        <BookingDetails>
+          <ns:PromisedShipDateTime>2017-12-05T11:25:48.216+02:00</ns:PromisedShipDateTime>
+          <DeliveryDetails>
+            <ns:PromisedDeliveryDateTime>2017-12-07T11:25:48.000+02:00</ns:PromisedDeliveryDateTime>
+          </DeliveryDetails>
+          <RouteStop>
+            <ns:Type name="SERVICE"/>
+            <StopDetail>
+              <ns:BillOfLadingReference>
+                <ns:Facility>
+                  <ns:IDs>
+                    <ns:ID>NORMAL123</ns:ID>
+                  </ns:IDs>
+                </ns:Facility>
+              </ns:BillOfLadingReference>
+            </StopDetail>
+          </RouteStop>
+        </BookingDetails>
+        <CalendarDateOnlyRequiredIndicator>true</CalendarDateOnlyRequiredIndicator>
+      </CarrierBookingGroup>
+    </CarrierBooking>
+  </DataArea>
+</GetCarrierBooking>
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,241 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ProcessFulfilmentSource releaseID="1.0" languageCode="en" xmlns="http://www.kingfisher.com/oagis/9" xmlns:ns="http://www.openapplications.org/oagis/9">
+         <ns:ApplicationArea>
+            <ns:Sender>
+               <ns:LogicalID>ATG Request HD CCND</ns:LogicalID>
+               <ns:ComponentID>127.0.0.1</ns:ComponentID>
+            </ns:Sender>
+            <ns:CreationDateTime>2015-05-21T16:31:08.157+01:00</ns:CreationDateTime>
+            <ns:BODID>66811492268157</ns:BODID>
+         </ns:ApplicationArea>
+         <DataArea>
+            <ns:Process>
+               <ns:ActionCriteria>
+                  <ns:ActionExpression actionCode="Add" expressionLanguage="Xpath">ProcessFulfilmentSource/DataArea/FulfilmentSource</ns:ActionExpression>
+               </ns:ActionCriteria>
+            </ns:Process>
+            <FulfilmentSource>
+               <FulfilmentSourceHeader>
+                  <SalesOrderReference>
+                     <ns:DocumentID>
+                        <ns:ID schemeName="ATG">o2113001</ns:ID>
+                     </ns:DocumentID>
+                  </SalesOrderReference>
+                  <ns:SourceID>0505</ns:SourceID>
+                  <BrandChannel>
+                     <Brand>
+                        <ns:Code>BQ</ns:Code>
+                     </Brand>
+                     <Channel>
+                        <ns:Code>CCC</ns:Code>
+                     </Channel>
+                  </BrandChannel>
+                  <ShipToParty>
+                     <ns:Title>Mr</ns:Title>
+                     <ns:GivenName>Jed</ns:GivenName>
+                     <ns:FamilyName>Edwards</ns:FamilyName>
+                     <Contact>
+                        <Location>
+                           <ns:Address type="CUSTOMER">
+                              <ns:StreetName>48</ns:StreetName>
+                              <ns:CityName>Here</ns:CityName>
+                              <ns:CountryCode>GB</ns:CountryCode>
+                              <ns:PostalCode>B75 5LR</ns:PostalCode>
+                           </ns:Address>
+                        </Location>
+                     </Contact>
+                  </ShipToParty>
+                  <CollectionParty>
+                     <ns:Name>Fareham</ns:Name>
+                     <Contact>
+                        <Location>
+                           <ns:Address>
+                              <ns:BuildingName>150-158 Southampton Road</ns:BuildingName>
+                              <ns:StreetName>Titchfield</ns:StreetName>
+                              <ns:CityName>Fareham</ns:CityName>
+                              <ns:CountrySubDivisionCode>HAMPSHIRE</ns:CountrySubDivisionCode>
+                              <ns:CountryCode>GB</ns:CountryCode>
+                              <ns:PostalCode>PO14 4PH</ns:PostalCode>
+                           </ns:Address>
+                        </Location>
+                     </Contact>
+                  </CollectionParty>
+                  <ns:Type>L_Standard</ns:Type>
+                  <NearestStoreID>0111</NearestStoreID>
+                  <InstallationManagedOrderIndicator>false</InstallationManagedOrderIndicator>
+               </FulfilmentSourceHeader>
+               <FulfilmentSourceLine>
+                  <SalesOrderReference>
+                     <ns:LineNumber>1</ns:LineNumber>
+                  </SalesOrderReference>
+                  <ns:ActionCodes>
+                     <ns:Code listName="Standard">NA</ns:Code>
+                  </ns:ActionCodes>
+                  <ProductItem>
+                     <ns:ItemID>
+                        <ns:ID>100365322</ns:ID>
+                     </ns:ItemID>
+                     <ns:UPCID>4003530007066</ns:UPCID>
+                     <ns:Dimensions>
+                        <ns:WidthMeasure unitCode="CMT">0</ns:WidthMeasure>
+                        <ns:LengthMeasure unitCode="CMT">0</ns:LengthMeasure>
+                        <ns:HeightMeasure unitCode="CMT">0</ns:HeightMeasure>
+                        <ns:Measure type="WEIGHT" unitCode="KGM">0</ns:Measure>
+                     </ns:Dimensions>
+                     <ProductIndicator>
+                        <Indicator>false</Indicator>
+                        <ns:Type name="COSHH"/>
+                     </ProductIndicator>
+                     <ns:TransportationMethodCode>Z001</ns:TransportationMethodCode>
+                  </ProductItem>
+                  <ChangedLineIndicator>true</ChangedLineIndicator>
+                  <ns:RequiredQuantity>1</ns:RequiredQuantity>
+                  <ns:RequiredDateTime>2015-05-21T16:31:08.148+01:00</ns:RequiredDateTime>
+                  <ns:UnitPrice>
+                     <ns:Amount currencyID="GBP">10.0</ns:Amount>
+                     <ns:PerQuantity>1</ns:PerQuantity>
+                  </ns:UnitPrice>
+                  <ShippingMethod>
+                     <ns:CategoryCodes>
+                        <ns:Code listName="DEFAULT">ZVH</ns:Code>
+                     </ns:CategoryCodes>
+                  </ShippingMethod>
+                  <DeliveryPriorityCode>NORMAL</DeliveryPriorityCode>
+                  <DeliveryType>DELIVERY</DeliveryType>
+                  <NewLineIndicator>true</NewLineIndicator>
+                  <DeliveryGroupingRequiredIndicator>true</DeliveryGroupingRequiredIndicator>
+               </FulfilmentSourceLine>
+               <FulfilmentSourceLine>
+                  <SalesOrderReference>
+                     <ns:LineNumber>2</ns:LineNumber>
+                  </SalesOrderReference>
+                  <ns:ActionCodes>
+                     <ns:Code listName="Standard">NA</ns:Code>
+                  </ns:ActionCodes>
+                  <ProductItem>
+                     <ns:ItemID>
+                        <ns:ID>123456789</ns:ID>
+                     </ns:ItemID>
+                     <ns:UPCID>4003530007067</ns:UPCID>
+                     <ns:Dimensions>
+                        <ns:WidthMeasure unitCode="CMT">0</ns:WidthMeasure>
+                        <ns:LengthMeasure unitCode="CMT">0</ns:LengthMeasure>
+                        <ns:HeightMeasure unitCode="CMT">0</ns:HeightMeasure>
+                        <ns:Measure type="WEIGHT" unitCode="KGM">0</ns:Measure>
+                     </ns:Dimensions>
+                     <ProductIndicator>
+                        <Indicator>false</Indicator>
+                        <ns:Type name="COSHH"/>
+                     </ProductIndicator>
+                     <ns:TransportationMethodCode>Z001</ns:TransportationMethodCode>
+                  </ProductItem>
+                  <ChangedLineIndicator>true</ChangedLineIndicator>
+                  <ns:RequiredQuantity>3</ns:RequiredQuantity>
+                  <ns:RequiredDateTime>2015-05-21T16:31:08.148+01:00</ns:RequiredDateTime>
+                  <ns:UnitPrice>
+                     <ns:Amount currencyID="GBP">20.0</ns:Amount>
+                     <ns:PerQuantity>1</ns:PerQuantity>
+                  </ns:UnitPrice>
+                  <ShippingMethod>
+                     <ns:CategoryCodes>
+                        <ns:Code listName="DEFAULT">ZVH</ns:Code>
+                     </ns:CategoryCodes>
+                  </ShippingMethod>
+                  <DeliveryPriorityCode>NORMAL</DeliveryPriorityCode>
+                  <DeliveryType>DELIVERY</DeliveryType>
+                  <NewLineIndicator>true</NewLineIndicator>
+                  <DeliveryGroupingRequiredIndicator>true</DeliveryGroupingRequiredIndicator>
+               </FulfilmentSourceLine>
+               <FulfilmentSourceLine>
+                  <SalesOrderReference>
+                     <ns:LineNumber>3</ns:LineNumber>
+                  </SalesOrderReference>
+                  <ns:ActionCodes>
+                     <ns:Code listName="Standard">NA</ns:Code>
+                  </ns:ActionCodes>
+                  <ProductItem>
+                     <ns:ItemID>
+                        <ns:ID>100284092</ns:ID>
+                     </ns:ItemID>
+                     <ns:UPCID>03594544</ns:UPCID>
+                     <ns:Dimensions>
+                        <ns:WidthMeasure unitCode="CMT">0</ns:WidthMeasure>
+                        <ns:LengthMeasure unitCode="CMT">0</ns:LengthMeasure>
+                        <ns:HeightMeasure unitCode="CMT">0</ns:HeightMeasure>
+                        <ns:Measure type="WEIGHT" unitCode="KGM">0</ns:Measure>
+                     </ns:Dimensions>
+                     <ProductIndicator>
+                        <Indicator>false</Indicator>
+                        <ns:Type name="COSHH">false</ns:Type>
+                     </ProductIndicator>
+                     <ns:TransportationMethodCode>Z001</ns:TransportationMethodCode>
+                  </ProductItem>
+                  <ChangedLineIndicator>true</ChangedLineIndicator>
+                  <ns:RequiredQuantity>2</ns:RequiredQuantity>
+                  <ns:RequiredDateTime>2015-05-21T16:31:08.148+01:00</ns:RequiredDateTime>
+                  <ns:UnitPrice>
+                     <ns:Amount currencyID="GBP">0.0</ns:Amount>
+                     <ns:PerQuantity>1</ns:PerQuantity>
+                  </ns:UnitPrice>
+                  <ShippingMethod>
+                     <ns:CategoryCodes>
+                        <ns:Code listName="DEFAULT">ZVS</ns:Code>
+                     </ns:CategoryCodes>
+                  </ShippingMethod>
+                  <DeliveryPriorityCode>NORMAL</DeliveryPriorityCode>
+                  <DeliveryType>COLLECTION</DeliveryType>
+                  <FulfilmentSiteID>0111</FulfilmentSiteID>
+                  <NewLineIndicator>true</NewLineIndicator>
+                  <DeliveryGroupingRequiredIndicator>true</DeliveryGroupingRequiredIndicator>
+               </FulfilmentSourceLine>
+               <FulfilmentSourceLine>
+                  <SalesOrderReference>
+                     <ns:LineNumber>4</ns:LineNumber>
+                  </SalesOrderReference>
+                  <ns:ActionCodes>
+                     <ns:Code listName="Standard">NA</ns:Code>
+                  </ns:ActionCodes>
+                  <ProductItem>
+                     <ns:ItemID>
+                        <ns:ID>100156337</ns:ID>
+                     </ns:ItemID>
+                     <ns:UPCID>5013866047190</ns:UPCID>
+                     <ns:Dimensions>
+                        <ns:WidthMeasure unitCode="CMT">13.0</ns:WidthMeasure>
+                        <ns:LengthMeasure unitCode="CMT">26.0</ns:LengthMeasure>
+                        <ns:HeightMeasure unitCode="CMT">5.0</ns:HeightMeasure>
+                        <ns:Measure type="WEIGHT" unitCode="KGM">0.4</ns:Measure>
+                     </ns:Dimensions>
+                     <ProductIndicator>
+                        <Indicator>false</Indicator>
+                        <ns:Type name="COSHH">false</ns:Type>
+                     </ProductIndicator>
+                     <ShippingGroupCategoryCode>ZRFC</ShippingGroupCategoryCode>
+                     <ns:TransportationMethodCode>ZF13</ns:TransportationMethodCode>
+                  </ProductItem>
+                  <ChangedLineIndicator>true</ChangedLineIndicator>
+                  <ns:RequiredQuantity>1</ns:RequiredQuantity>
+                  <ns:RequiredDateTime>2015-05-29T16:03:18.604+01:00</ns:RequiredDateTime>
+                  <ns:UnitPrice>
+                     <ns:Amount currencyID="GBP">10.0</ns:Amount>
+                     <ns:PerQuantity>1</ns:PerQuantity>
+                  </ns:UnitPrice>
+                  <ShippingMethod>
+                     <ns:CategoryCodes>
+                        <ns:Code listName="DEFAULT">ZPS</ns:Code>
+                     </ns:CategoryCodes>
+                  </ShippingMethod>
+                  <DeliveryPriorityCode>NORMAL</DeliveryPriorityCode>
+                  <DeliveryType>COLLECTION</DeliveryType>
+                  <FulfilmentSiteID>0154</FulfilmentSiteID>
+                  <NewLineIndicator>true</NewLineIndicator>
+                  <DeliveryGroupingRequiredIndicator>true</DeliveryGroupingRequiredIndicator>
+                  <ToleranceLevel>2</ToleranceLevel>
+               </FulfilmentSourceLine>
+            </FulfilmentSource>
+         </DataArea>
+      </ProcessFulfilmentSource>
+   </soapenv:Body>
+</soapenv:Envelope>

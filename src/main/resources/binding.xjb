@@ -2,9 +2,10 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:oa="http://www.openapplications.org/oagis/9"
+  targetNamespace="http://www.kingfisher.com/oagis/9"
+  xmlns="http://www.kingfisher.com/oagis/9"
   elementFormDefault="qualified"
-
-  targetNamespace="http://w.com/location.contactlm"
   jaxb:version="2.1">
 
      <jaxb:bindings schemaLocation="PFS/F5/com_kingfisher_platform/1_2_1/Common/OAGi/Components/Components.xsd">

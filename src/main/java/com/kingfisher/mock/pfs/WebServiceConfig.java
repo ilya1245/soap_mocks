@@ -20,15 +20,15 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
-		return new ServletRegistrationBean(servlet, "/pfsws/*");
+		return new ServletRegistrationBean(servlet, "/mock/*");
 	}
 
 	@Bean(name = "countries")
 	public DefaultWsdl11Definition countryWsdl11Definition(XsdSchema countriesSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("PfsPort");
-		wsdl11Definition.setLocationUri("/pfsws/country");
-		wsdl11Definition.setTargetNamespace("http://spring.io/kingfisher/mock");
+		wsdl11Definition.setPortTypeName("CountryPort");
+		wsdl11Definition.setLocationUri("/mock/country");
+		wsdl11Definition.setTargetNamespace("http://spring.io/kingfisher/mock1");
 		wsdl11Definition.setSchema(countriesSchema);
 		return wsdl11Definition;
 	}
@@ -37,9 +37,19 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public DefaultWsdl11Definition pfsWsdl11Definition(XsdSchema pfsSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("PfsPort");
-		wsdl11Definition.setLocationUri("/pfsws/pfs");
-		wsdl11Definition.setTargetNamespace("http://spring.io/kingfisher/mock");
+		wsdl11Definition.setLocationUri("/mock/pfs");
+		wsdl11Definition.setTargetNamespace("http://www.kingfisher.com/oagis/9");
 		wsdl11Definition.setSchema(pfsSchema);
+		return wsdl11Definition;
+	}
+
+	@Bean(name = "carrier")
+	public DefaultWsdl11Definition carrierWsdl11Definition(XsdSchema carrierSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("CarrierPort");
+		wsdl11Definition.setLocationUri("/mock/carrier");
+		wsdl11Definition.setTargetNamespace("http://www.kingfisher.com/oagis/9");
+		wsdl11Definition.setSchema(carrierSchema);
 		return wsdl11Definition;
 	}
 
@@ -51,5 +61,10 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	@Bean
 	public XsdSchema pfsSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs/ProcessFulfilmentSource.xsd"));
+	}
+
+	@Bean
+	public XsdSchema carrierSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("PFS/F5/com_kingfisher_oagis/9_5_1/Developer/BODs/GetCarrierBooking.xsd"));
 	}
 }
